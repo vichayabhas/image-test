@@ -23,7 +23,7 @@ function change(provider: Provider, typing: string | null) {
 }
 function showImage(imgSrc: string | null) {
   if (!imgSrc) {
-    return "invalid";
+    return "null";
   }
   try {
     const url = new URL(imgSrc);
