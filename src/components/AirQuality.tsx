@@ -1,3 +1,4 @@
+import React from "react";
 import getAirQuality from "@/libs/otherBackend/getAirQuality";
 import getTimeOffset from "@/libs/user/getTimeOffset";
 import GetTimeHtml from "./GetTimeHtml";
@@ -13,8 +14,8 @@ export default async function AirQuality() {
         <th>aqi</th>
       </tr>
       {airQuality.measurements.hourly.map((hourly,i) => (
-        i>=airQuality.measurements.hourly.length-2?null:
-        <tr>
+      
+        <tr key={i}>
           <td>
             <GetTimeHtml input={hourly.ts} offset={timeOffset} />
           </td>
@@ -25,3 +26,4 @@ export default async function AirQuality() {
     </table>
   );
 }
+ // i>=airQuality.measurements.hourly.length-2?null:

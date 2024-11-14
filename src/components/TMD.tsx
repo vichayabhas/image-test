@@ -1,4 +1,5 @@
-export default async function () {
+import React from "react";
+export default async function TMD () {
   const res = await fetch("https://www.tmd.go.th/forecast/daily", {
     cache: "no-store",
   });
