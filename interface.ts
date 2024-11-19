@@ -7,7 +7,7 @@ export interface ReceiveAirQuality {
         {
             ts: string,//date
             aqi: number,
-            pm25: {
+            pm25?: {
                 aqi: number,
                 concentration: number
             }
