@@ -6,33 +6,12 @@ export interface ReceiveAirQuality {
         hourly:
         {
             ts: string,//date
-            aqi?: number,
-            pm25?: {
+            aqi: number,
+            pm25: {
                 aqi: number,
                 concentration: number
             }
         }[],
-        daily:
-        {
-            ts: string,//date
-            aqi?: number,
-            pm25?: {
-                aqi: number,
-                concentration: number
-            }
-            pressure?: number,
-            humidity?: number,
-            wind?: {
-                speed: number,
-                direction: number
-            },
-            icon?: string,
-            condition?: string,
-            temperature?: {
-                max: number,
-                min: number
-            },
-        }[]
     }
 }
 export interface InterTimeOffset {
